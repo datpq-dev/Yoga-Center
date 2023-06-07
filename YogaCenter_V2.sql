@@ -12,6 +12,7 @@ CREATE TABLE user_table (
   phone VARCHAR(20),
   status VARCHAR(50),
   role_id INT,
+  loyaltyStatus BOOLEAN,
   FOREIGN KEY (role_id) REFERENCES Role_table(role_id)
 );
 
@@ -117,26 +118,26 @@ INSERT INTO Role_table (role_id, role_name) VALUES
 (4, 'customers');
 
 -- Insert data into user_table
-INSERT INTO user_table (user_id, user_name, email, address, gender, phone, status, role_id) VALUES
-(1, 'Admin User 1', 'admin1@example.com', '123 Admin St', 'Male', '123456789', 'Active', 1),
-(2, 'Admin User 2', 'admin2@example.com', '456 Admin St', 'Female', '987654321', 'Active', 1),
-(3, 'Staff User 1', 'staff1@example.com', '123 Staff St', 'Male', '123456789', 'Active', 2),
-(4, 'Staff User 2', 'staff2@example.com', '456 Staff St', 'Female', '987654321', 'Active', 2),
-(5, 'Teacher User 1', 'teacher1@example.com', '123 Teacher St', 'Male', '123456789', 'Active', 3),
-(6, 'Teacher User 2', 'teacher2@example.com', '456 Teacher St', 'Female', '987654321', 'Active', 3),
-(7, 'Teacher User 3', 'teacher3@example.com', '789 Teacher St', 'Male', '123456789', 'Active', 3),
-(8, 'Teacher User 4', 'teacher4@example.com', '012 Teacher St', 'Female', '987654321', 'Active', 3),
-(9, 'Teacher User 5', 'teacher5@example.com', '345 Teacher St', 'Male', '123456789', 'Active', 3),
-(10, 'Customer User 1', 'customer1@example.com', '123 Customer St', 'Female', '987654321', 'Active', 4),
-(11, 'Customer User 2', 'customer2@example.com', '456 Customer St', 'Male', '123456789', 'Active', 4),
-(12, 'Customer User 3', 'customer3@example.com', '789 Customer St', 'Female', '987654321', 'Active', 4),
-(13, 'Customer User 4', 'customer4@example.com', '012 Customer St', 'Male', '123456789', 'Active', 4),
-(14, 'Customer User 5', 'customer5@example.com', '345 Customer St', 'Female', '987654321', 'Active', 4),
-(15, 'Customer User 6', 'customer6@example.com', '678 Customer St', 'Male', '123456789', 'Active', 4),
-(16, 'Customer User 7', 'customer7@example.com', '901 Customer St', 'Female', '987654321', 'Active', 4),
-(17, 'Customer User 8', 'customer8@example.com', '234 Customer St', 'Male', '123456789', 'Active', 4),
-(18, 'Customer User 9', 'customer9@example.com', '567 Customer St', 'Female', '987654321', 'Active', 4),
-(19, 'Customer User 10', 'customer10@example.com', '890 Customer St', 'Male', '123456789', 'Active', 4);
+INSERT INTO user_table (user_id, user_name, email, address, gender, phone, status, role_id, loyaltyStatus BOOLEAN) VALUES
+(1, 'Admin User 1', 'admin1@example.com', '123 Admin St', 'Male', '123456789', 'Active', 1, null),
+(2, 'Admin User 2', 'admin2@example.com', '456 Admin St', 'Female', '987654321', 'Active', 1, null),
+(3, 'Staff User 1', 'staff1@example.com', '123 Staff St', 'Male', '123456789', 'Active', 2, null),
+(4, 'Staff User 2', 'staff2@example.com', '456 Staff St', 'Female', '987654321', 'Active', 2, null),
+(5, 'Teacher User 1', 'teacher1@example.com', '123 Teacher St', 'Male', '123456789', 'Active', 3, null),
+(6, 'Teacher User 2', 'teacher2@example.com', '456 Teacher St', 'Female', '987654321', 'Active', 3, null),
+(7, 'Teacher User 3', 'teacher3@example.com', '789 Teacher St', 'Male', '123456789', 'Active', 3, null),
+(8, 'Teacher User 4', 'teacher4@example.com', '012 Teacher St', 'Female', '987654321', 'Active', 3, null),
+(9, 'Teacher User 5', 'teacher5@example.com', '345 Teacher St', 'Male', '123456789', 'Active', 3, null),
+(10, 'Customer User 1', 'customer1@example.com', '123 Customer St', 'Female', '987654321', 'Active', 4, null),
+(11, 'Customer User 2', 'customer2@example.com', '456 Customer St', 'Male', '123456789', 'Active', 4, null),
+(12, 'Customer User 3', 'customer3@example.com', '789 Customer St', 'Female', '987654321', 'Active', 4, null),
+(13, 'Customer User 4', 'customer4@example.com', '012 Customer St', 'Male', '123456789', 'Active', 4, null),
+(14, 'Customer User 5', 'customer5@example.com', '345 Customer St', 'Female', '987654321', 'Active', 4, null),
+(15, 'Customer User 6', 'customer6@example.com', '678 Customer St', 'Male', '123456789', 'Active', 4, null),
+(16, 'Customer User 7', 'customer7@example.com', '901 Customer St', 'Female', '987654321', 'Active', 4, null),
+(17, 'Customer User 8', 'customer8@example.com', '234 Customer St', 'Male', '123456789', 'Active', 4, null),
+(18, 'Customer User 9', 'customer9@example.com', '567 Customer St', 'Female', '987654321', 'Active', 4, null),
+(19, 'Customer User 10', 'customer10@example.com', '890 Customer St', 'Male', '123456789', 'Active', 4, null);
 
 -- Insert data into Course_table
 INSERT INTO Course_table (course_id, course_name, startdate, enddate, class_id, status) VALUES
